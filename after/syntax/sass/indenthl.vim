@@ -103,12 +103,13 @@ elseif (g:indenthlstyle == 2)
   HiLink cTab7 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=NONE
 elseif (g:indenthlstyle == 3)
   " THREE: all alternating colors, but it gets darker with each alternate:
+  " 1b1d1e
   HiLink cTab1 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=NONE
-  HiLink cTab2 term=NONE cterm=NONE ctermbg=lightgray gui=NONE guibg=gray95
+  HiLink cTab2 term=NONE cterm=NONE ctermbg=lightgray gui=NONE guibg=#202324
   HiLink cTab3 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=NONE
-  HiLink cTab4 term=NONE cterm=NONE ctermbg=brown gui=NONE guibg=gray85
+  HiLink cTab4 term=NONE cterm=NONE ctermbg=brown gui=NONE guibg=#262a2b
   HiLink cTab5 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=NONE
-  HiLink cTab6 term=NONE cterm=NONE ctermbg=blue gui=NONE guibg=gray75
+  HiLink cTab6 term=NONE cterm=NONE ctermbg=blue gui=NONE guibg=#2d3233
   HiLink cTab7 term=NONE cterm=NONE ctermbg=NONE gui=NONE guibg=NONE
 else
   echoe "indenthl: No such syntax style '". g:indenthlstyle ."' - use 1,2, or 3"
