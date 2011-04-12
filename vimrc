@@ -1,5 +1,5 @@
 set nocompatible
-let mapleader = ";"
+let mapleader = ","
 
 set number
 set ruler
