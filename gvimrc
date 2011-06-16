@@ -195,29 +195,11 @@ function Mkdir(file)
   call s:UpdateNERDTree()
 endfunction
 
-function Edit(file)
-  if exists("b:NERDTreeRoot")
-    wincmd p
-  endif
-
-  execute "e " . fnameescape(a:file)
-
-ruby << RUBY
-  destination = File.expand_path(VIM.evaluate(%{system("dirname " . shellescape(a:file, 1))}))
-  pwd         = File.expand_path(Dir.pwd)
-  home        = pwd == File.expand_path("~")
-
-  if home || Regexp.new("^" + Regexp.escape(pwd)) !~ destination
-    VIM.command(%{call ChangeDirectory(fnamemodify(a:file, ":h"), 0)})
-  end
-RUBY
-endfunction
 
 " Define the NERDTree-aware aliases
 call s:DefineCommand("cd", "ChangeDirectory")
 call s:DefineCommand("touch", "Touch")
 call s:DefineCommand("rm", "Remove")
-call s:DefineCommand("e", "Edit")
 call s:DefineCommand("mkdir", "Mkdir")
 
 " Include user's local vim config

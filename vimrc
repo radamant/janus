@@ -42,7 +42,7 @@ map <Leader>n :NERDTreeToggle<CR>
 let g:CommandTMaxHeight=20
 
 " ZoomWin configuration
-map <Leader><Leader> :ZoomWin<CR>
+"map <Leader><Leader> :ZoomWin<CR>
 
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
@@ -88,7 +88,7 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Opens a tab edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+"map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
