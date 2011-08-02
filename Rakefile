@@ -159,6 +159,8 @@ vim_plugin_task "bufkill",          "git://github.com/vim-scripts/bufkill.vim.gi
 vim_plugin_task "bufexplorer",      "git://github.com/vim-scripts/bufexplorer.zip.git"
 vim_plugin_task "vim-jade",         "git://github.com/digitaltoad/vim-jade.git"
 vim_plugin_task "tabular", 					"git://github.com/godlygeek/tabular.git"
+vim_plugin_task "vim-coffee-script","git://github.com/kchmck/vim-coffee-script.git"
+vim_plugin_task 'mustache',         'git://github.com/juvenn/mustache.vim.git'
 
 vim_plugin_task "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "find ruby -name '.gitignore' | xargs rm"
@@ -203,14 +205,14 @@ vim_plugin_task "janus_themes" do
 end
 
 vim_plugin_task "molokai" do
-  sh "curl https://github.com/mrtazz/molokai.vim/raw/master/colors/molokai.vim > colors/molokai.vim"
+  sh "curl https://raw.github.com/mrtazz/molokai.vim/master/colors/molokai.vim > colors/molokai.vim"
 end
-vim_plugin_task "mustache" do
-  sh "curl https://github.com/defunkt/mustache/raw/master/contrib/mustache.vim > syntax/mustache.vim"
-  File.open(File.expand_path('../ftdetect/mustache.vim', __FILE__), 'w') do |file|
-    file << "au BufNewFile,BufRead *.mustache        setf mustache"
-  end
-end
+#vim_plugin_task "mustache" do
+  #sh "curl https://github.com/juvenn/mustache/raw/master/contrib/mustache.vim > syntax/mustache.vim"
+  #File.open(File.expand_path('../ftdetect/mustache.vim', __FILE__), 'w') do |file|
+    #file << "au BufNewFile,BufRead *.mustache        setf mustache"
+  #end
+#end
 vim_plugin_task "arduino","git://github.com/vim-scripts/Arduino-syntax-file.git" do
   File.open(File.expand_path('../ftdetect/arduino.vim', __FILE__), 'w') do |file|
     file << "au BufNewFile,BufRead *.pde             setf arduino"
